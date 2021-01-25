@@ -10,6 +10,6 @@ console.log(cities);
 function FindMatches(wordToMatch, cities) {
   return cities.filter((place) => {
     const regex = new RegExp(wordToMatch, "gi");
-    return place.city.match(regex);
+    return place.city.match(regex) || place.state.match(regex);
   });
 }
